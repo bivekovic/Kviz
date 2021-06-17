@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Kviz</string>
+    <string name="da">DA</string>
+    <string name="ne">NE</string>
+    <string name="prethodno_pitanje">Prethodno pitanje</string>
+    <string name="sljede_e_pitanje">Sljedeće pitanje</string>
+    <string name="provjeri_koliko_je_tocnih_odgovora">Provjeri koliko je točnih odgovora</string>
+    <string-array name="pitanja">
+        <item>Danas je srijeda</item>
+        <item>Dolazi ljeto</item>
+        <item>Maribor je glavni grad Slovenije</item>
+        <item>Jadran je najljepše more na svijetu</item>
+    </string-array>
+    <string-array name="odgovori">
+        <item>NE</item>
+        <item>DA</item>
+        <item>NE</item>
+        <item>DA</item>
+    </string-array>
+</resources>
