@@ -1,5 +1,6 @@
 package com.algebra.kviz
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -63,11 +64,19 @@ class MainActivity : AppCompatActivity( ) {
         bPrethodno.setOnClickListener { pokaziPitanje( index - 1 ) }
         bSljedece.setOnClickListener { pokaziPitanje( index + 1 ) }
         bProvjera.setOnClickListener {
-            var broTocnih = 0
+            /*
+            var brojTocnih = 0
             for( p in pitanja )
                 if( p.odgovor==p.tocanOdgovor )
-                    broTocnih++
-            Toast.makeText( this, "$broTocnih / ${ pitanja.size }", Toast.LENGTH_LONG ).show( )
+                    brojTocnih++
+            Toast.makeText( this, "$brojTocnih / ${ pitanja.size }", Toast.LENGTH_LONG ).show( )
+            */
+            val brojTocnih = pitanja.filter { p -> p.odgovor==p.tocanOdgovor }.size
+            val startSecondActivity = Intent( this, RezultatActivity::class.java ).apply {
+                putExtra( TOCNIH_KLJUC, brojTocnih )
+                putExtra( UKUPNO_KLJUC, pitanja.size )
+            }
+            startActivity( startSecondActivity )
         }
     }
 
